@@ -1,0 +1,41 @@
+{
+  "name": "create-preffx",
+  "version": "0.1.0",
+  "description": "Scaffold a new PreffX app with Vite",
+  "author": "Marat Sabitov",
+  "type": "module",
+  "bin": {
+    "create-preffx": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "assets",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "preffx",
+    "vite",
+    "scaffold",
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/msabitov/create-preffx",
+  "bugs": {
+    "url": "https://github.com/msabitov/create-preffx/issues"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.1",
+    "picocolors": "^1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msabitov/create-preffx"
+  }
+}
