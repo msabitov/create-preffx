@@ -26,7 +26,7 @@ export function buildPackageJson(projectName, language, css) {
       preview: 'vite preview',
     },
     dependencies: {
-      preffx: '^0.4.0',
+      preffx: '^0.5.0',
     },
     devDependencies: {
       vite: '^8.0.0',
