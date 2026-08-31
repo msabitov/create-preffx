@@ -10,8 +10,7 @@ export function mainTsxTemplate() {
 import './index.css'
 import { App } from './App'
 
-const root = createRoot(document.getElementById('app') as HTMLElement);
-root.mount(App);
+createRoot().mount(App, { node: document.getElementById('app') as HTMLElement });
 `;
 }
 

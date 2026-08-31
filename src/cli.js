@@ -21,6 +21,7 @@ export function runCLI(args) {
     language: null,       // null = prompt, 'ts' | 'js'
     css: null,            // null = prompt, 'none' | 'modules' | 'tailwind'
     pkgManager: null,     // null = prompt, 'npm' | 'yarn' | 'pnpm' | 'bun'
+    ssr: false,           // true = SSR (Vite SSR) template
     noInstall: false,
     help: false,
     version: false,
@@ -63,6 +64,11 @@ export function runCLI(args) {
         }
         options.pkgManager = pmVal;
         i += 2;
+        break;
+
+      case '--ssr':
+        options.ssr = true;
+        i++;
         break;
 
       case '--no-install':

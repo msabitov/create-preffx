@@ -95,6 +95,25 @@ export async function getProjectOptions(cliOptions) {
     }
   }
 
+  // Rendering mode (CSR vs SSR); options.ssr becomes a boolean
+  let renderMode = cliOptions.ssr ? 'ssr' : null;
+  if (!renderMode) {
+    renderMode = await select({
+      message: 'Select a rendering mode',
+      initialValue: 'csr',
+      options: [
+        { value: 'csr', label: 'CSR (client-side rendering)' },
+        { value: 'ssr', label: 'SSR (server-side rendering with Vite)' },
+      ],
+    });
+
+    if (isCancel(renderMode)) {
+      cancel('Operation cancelled.');
+      return null;
+    }
+  }
+  options.ssr = renderMode === 'ssr';
+
   // CSS solution
   options.css = cliOptions.css;
   if (!options.css) {

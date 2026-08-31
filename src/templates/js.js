@@ -10,8 +10,7 @@ export function mainJsxTemplate() {
 import './index.css'
 import { App } from './App'
 
-const root = createRoot(document.getElementById('app'));
-root.mount(App);
+createRoot().mount(App, { node: document.getElementById('app') });
 `;
 }
 

@@ -10,6 +10,35 @@ export function htmlTemplate(projectName) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>${projectName}</title>
+    <style>
+      /* Critical styles prevent logo flash before index.css loads */
+      html, body {
+        margin: 0;
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .logos {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo {
+        height: 160px;
+        padding: 24px;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -30,6 +59,35 @@ export function htmlTemplateJs(projectName) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>${projectName}</title>
+    <style>
+      /* Critical styles prevent logo flash before index.css loads */
+      html, body {
+        margin: 0;
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .logos {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo {
+        height: 160px;
+        padding: 24px;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -124,6 +182,12 @@ export function appCssTemplate() {
   transition: filter 300ms;
 }
 
+.greeting {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #0099e5;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -188,6 +252,12 @@ export function appModuleCssTemplate() {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+}
+
+.greeting {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #0099e5;
 }
 
 .logo:hover {

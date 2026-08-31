@@ -90,6 +90,7 @@ ${pc.bold('Options:')}
   ${pc.cyan('--js')}              Use JavaScript (default: TypeScript)
   ${pc.cyan('--css <type>')}      CSS solution: none, modules, tailwind (default: none)
   ${pc.cyan('--pm <manager>')}    Package manager: npm, yarn, pnpm, bun (default: npm)
+  ${pc.cyan('--ssr')}             Scaffold an SSR project (Vite SSR + Express)
   ${pc.cyan('--no-install')}      Skip dependency installation
   ${pc.cyan('--help')}            Show this help message
   ${pc.cyan('--version')}         Show version
@@ -98,6 +99,7 @@ ${pc.bold('Examples:')}
   ${pc.dim('$')} ${pc.green('create-preffx')}
   ${pc.dim('$')} ${pc.green('create-preffx my-app')}
   ${pc.dim('$')} ${pc.green('create-preffx my-app --js --css tailwind --pm pnpm')}
+  ${pc.dim('$')} ${pc.green('create-preffx my-app --ssr')}
   `);
 }
 
