@@ -1,6 +1,6 @@
 {
   "name": "create-preffx",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Scaffold a new PreffX app with Vite",
   "author": "Marat Sabitov",
   "type": "module",

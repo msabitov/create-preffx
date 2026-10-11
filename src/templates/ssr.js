@@ -1,7 +1,7 @@
 /**
  * SSR-specific templates for create-preffx.
  * Implements a Vite SSR setup (entry-client / entry-server / server.js)
- * using PreffX 0.7.0 `preffx/server`.
+ * using PreffX 0.8.1 `preffx/server`.
  */
 
 const JSX_OXC = `  oxc: {
@@ -105,7 +105,7 @@ createRoot().mount(App, { node: document.getElementById('app') as HTMLElement })
 
 /**
  * Template for src/entry-server.jsx.
- * Uses PreffX 0.7.0 `preffx/server` createRoot + renderToString.
+ * Uses PreffX 0.8.1 `preffx/server` createRoot + renderToString.
  */
 export function entryServerJsxTemplate() {
   return `import { createRoot } from 'preffx/server'
