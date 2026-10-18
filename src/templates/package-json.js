@@ -43,7 +43,7 @@ export function buildPackageJson(projectName, language, css, ssr = false) {
     type: 'module',
     scripts,
     dependencies: {
-      preffx: '^0.8.1',
+      preffx: '^0.9.0',
     },
     devDependencies: {
       vite: '^8.0.0',

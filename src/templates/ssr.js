@@ -1,7 +1,7 @@
 /**
  * SSR-specific templates for create-preffx.
  * Implements a Vite SSR setup (entry-client / entry-server / server.js)
- * using PreffX 0.8.1 `preffx/server`.
+ * using PreffX 0.9.0 `preffx/server`.
  */
 
 const JSX_OXC = `  oxc: {
@@ -105,7 +105,7 @@ createRoot().mount(App, { node: document.getElementById('app') as HTMLElement })
 
 /**
  * Template for src/entry-server.jsx.
- * Uses PreffX 0.8.1 `preffx/server` createRoot + renderToString.
+ * Uses PreffX 0.9.0 `preffx/server` createRoot + renderToString.
  */
 export function entryServerJsxTemplate() {
   return `import { createRoot } from 'preffx/server'
@@ -251,7 +251,7 @@ import viteLogo from './assets/vite-logo.svg'
 import preffxLogo from './assets/preffx-logo.svg'
 
 export function App(props, { resource, computed }) {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
@@ -287,7 +287,7 @@ import viteLogo from './assets/vite-logo.svg'
 import preffxLogo from './assets/preffx-logo.svg'
 
 export function App(props, { resource, computed }) {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
@@ -320,7 +320,7 @@ export function appJsxSsrTailwindTemplate() {
 import preffxLogo from './assets/preffx-logo.svg'
 
 export function App(props, { resource, computed }) {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
@@ -360,7 +360,7 @@ import viteLogo from './assets/vite-logo.svg'
 import preffxLogo from './assets/preffx-logo.svg'
 
 export const App: PC = (props, { resource, computed }) => {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
@@ -395,7 +395,7 @@ import viteLogo from './assets/vite-logo.svg'
 import preffxLogo from './assets/preffx-logo.svg'
 
 export const App: PC = (props, { resource, computed }) => {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
@@ -429,7 +429,7 @@ import viteLogo from './assets/vite-logo.svg'
 import preffxLogo from './assets/preffx-logo.svg'
 
 export const App: PC = (props, { resource, computed }) => {
-  const [greeting, refetch] = resource(async () => {
+  const [greeting, { refetch }] = resource(async () => {
     return { text: 'Hello from server-rendered PreffX!' };
   });
   const text = computed(() => greeting.state.value?.text ?? 'loading...');
